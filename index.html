@@ -1,459 +1,292 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Responsive</title>
-    <link rel="stylesheet" href="index.css">
-    <meta name="RESPONSIVE REDESIGN" content="Responsive Redesign Project">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SAKURA | Order Online</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link rel="stylesheet" href="style copy.css">
+    <link rel="stylesheet" href="https://use.typekit.net/rqr4kwv.css">
 
-    <style>
-        body {
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            
-        }
-
-        p{
-            padding-left: 30px;
-        }
-
-        h1 {
-            font-weight: bold;
-            font-size: 20px;
-            letter-spacing: 2px;
-            text-align: center;
-            color: #ffffff;
-            
-        }
-
-        /*
-            h2 bars on the sides of text referenced from https://www.trysmudford.com/blog/css-header-legend/ !
-        */
-        h2 {
-            display: grid;
-            grid-template-columns: minmax(20px, 1fr) auto minmax(20px, 1fr);
-            align-items: center;
-            text-align: center;
-            grid-gap: 20px;
-            width: 100%;
-
-            color: rgb(128, 55, 197);
-            background: linear-gradient(to right, rgb(128, 55, 197), rgb(44, 133, 185), rgb(239, 181, 110));
-            background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-        }
-
-        h2:before,
-        h2:after {
-            content: '';
-            border-top: 2px solid rgb(31, 68, 128);
-        }
-
-        h3{
-            font-size: 14px;
-            font-weight: bold;
-            color: rgb(125, 168, 206);
-        }
-
-        h4{
-            font-size: 4rem;
-            line-height: 100%;
-
-            color: rgb(128, 55, 197);
-            background: linear-gradient(to right, rgb(128, 55, 197), rgb(126, 182, 222), rgb(230, 179, 116));
-            background-clip: text;
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
-            
-            
-            vertical-align: center;
-            justify-content: center;
-            margin-top: 100px;
-        }
-
-        h5{
-            font-size: 12px;
-            color:#6f6f6f;
-            font-style: italic;
-            font-weight: normal;
-            margin-top: -40px;
-        }
-
-        desc{
-            text-align: center;
-            color:#6f6f6f;
-            font-size: 15px;
-        }
-
-        ul {
-            list-style-position: outside;
-            margin-top: 10px;
-            font-size: 15px;
-            color:#6f6f6f;
-           
-        }
-
-        
-
-        li{
-            margin-top: -5px;
-
-        }
-
-        a {
-            font-size: 1rem;
-            line-height: 100%;
-
-            color: rgb(36, 34, 95);
-            
-            text-align: center;
-            font-weight: bold;
-            vertical-align: center;
-            justify-content: center;
-            margin-top: 100px;
-            text-decoration: none;
-
-                    -webkit-transition: all 0.3s;
-                -moz-transition: all 0.3s;
-                -ms-transition: all 0.3s;
-                -o-transition: all 0.3s;
-                transition: all 0.3s;
-        }
-
-        a::after, a::before{
-            text-decoration: none;
-        }
-
-        a:hover{
-            color:rgb(35, 94, 154);
-            cursor: pointer;
-        }
-
-        
-
-        .navbar {
-          
-            padding-bottom: 50px;
-            
-            
-            left: 50%;
-            transform: translate(-50%, 0);
-            width: 98%;
-            position: fixed;
-
-            border-radius: 10px;
-
-            color: rgb(128, 55, 197);
-            background-image: linear-gradient(to right, rgb(128, 55, 197), rgb(126, 182, 222), rgb(230, 179, 116));
-
-            z-index: 999;
-            -webkit-transition: all 0.3s;
-                -moz-transition: all 0.3s;
-                -ms-transition: all 0.3s;
-                -o-transition: all 0.3s;
-                transition: all 0.3s;
-        }
-
-        .navigation {
-            left: 50%;
-            transform: translate(-50%, 0);
-            
-            width: auto;
-            position: absolute;
-            
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-    
-        }
-
-        /* SCROLLBAR */
-
-        ::-webkit-scrollbar-thumb:vertical {
-            background: rgb(216, 172, 83);
-            border-radius: 15px;
-            height: 50px;
-        }
-
-        ::-webkit-scrollbar {
-            height: 10px;
-            width: 7px;
-            background: rgb(255, 255, 255);
-        }
-
-        .container{
-            margin:0 auto;
-            margin-top: 0px;
-            width: auto;
-            height: auto !important;  
-        }
-
-        .header{
-            padding:30px;
-            /* padding-right: 90px;
-            padding-left: 90px; */
-            width: 100;
-            height: auto;
-            
-            line-height:150%;
-            font-weight:400;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            font-size: 14px;
-            letter-spacing: .5px;
-            text-align: left;
-
-            display: block;
-            position: relative;
-            overflow: hidden;
-
-            justify-content: center;
-            align-items: center;
-
-            background-color: #ffffff;
-            border-radius: 10px;
-            border: solid 2px #e0e0e0;
-
-            margin-bottom: 20px;
-            margin-right: 5px;
-            margin-left: 5px;
-        }
-
-        .content{
-            padding:50px;
-            /* padding-right: 90px;
-            padding-left: 90px; */
-            width: 100;
-            height: auto;
-            
-            line-height:150%;
-            font-weight:400;
-            font-family: "Helvetica Neue", Arial, sans-serif;
-            font-size: 14px;
-            letter-spacing: .5px;
-            text-align: left;
-
-            position: relative;
-            display: flex;
-            flex-direction: column;
-            overflow: hidden;
-
-            justify-content: center;
-            align-items: center;
-
-            background-color: #ffffff;
-            border-radius: 10px;
-            border: solid 2px #e0e0e0;
-
-            margin-bottom: 20px;
-            margin-right: 5px;
-            margin-left: 5px;
-
-            
-        }
-
-        img{
-            max-width:100%;
-            max-height:100%;    
-        }
-
-        img.left {
-            float: left;
-            margin: 10px 20px 10px 0;
-            height: 500px;
-            margin-right: 40px;
-        }
-
-        img.left-main {
-            float: left;
-            margin: 10px 20px 10px 0;
-            margin-right: 100px;
-            height: 80vh;
-            margin-top: 50px;
-          
-        }
-
-        img.right {
-            float: right;
-            margin: 10px 20px 10px 0;
-            height: 500px;
-            margin-left: 40px;
-        }
-
-        #right{
-            float: right;
-            margin: 10px 20px 10px 0;
-            margin-left: 40px;
-            margin-right: 150px;
-        }
-
-        img.center-split {
-            
-            width: 40vw;
-            display: inline;
-        }
-
-        img.center {
-            margin: auto;
-            max-width: 70vw;
-            display: block;
-        }
-
-        .imagewrapper{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            object-fit:scale-down;
-        }
-
-    </style>
 
 </head>
-    <body>
-        <div class="navbar">
-            <div class="navigation"><h1>RESPONSIVE REDESIGN</h1>
-            </div>
+<body>
+    <div class="navbar">
+        <img class="nav" src="hamburger.png"/>
+        <div id="title">
+            <img class="nav" src="sakura logo.png"/>&nbsp &nbsp <h1>SAKURA</h1>
         </div>
-       
-        <div class="container">
-            <div class = "header">
-                <img class="left-main" src="title2.png"/>
-                <h4>SAKURA MENU REDESIGN</h4>
-                <h5>In my Responsive Redesign project, I decided to redesign a online ordering page for Sakura,
-                    a Japapanese restaurant located in Providence. I chose this website because it was simple, but still had
-                    a few usability issues that may prevent a customer from gaining the best experience they
-                    can from using the site.   
-                </h5>
-                <a href="https://providencesakura.5menucities.com/catalog.aspx?cid=2">LINK TO ORIGINAL WEBSITE ></a>
-                <br>
-                <a href="https://sleepysloth123.github.io/SAKURAWEBPAGE/">LINK TO REDESIGNED WEBSITE ></a>
-            </div>
-            
-            <div class="content">
-               
-                <h2>USABILITY ISSUES </h2>
-                <br><br>
-                <div class="imagewrapper">
-                    <img style="width: 30%;" src="screenshot1.png"/>
-                    <img style="width: 30%;" src="screenshot2.png"/>
-                    <img style="width: 30%;" src="screenshot3.png"/>
+        
+        <img class="nav" src="viewcart.png"/>
+
+    </div>
+    <div class="container">
+        <div class="menubar">
+            <div class="mobiledropdown">
+                <input type="text" id="searchbar" placeholder="Search Menu">
+                <button class="dropdownbutton"> CHOOSE CATEGORY
+                    <img class="dropdownarrow" src="dropdownicon.png"/>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#">APPETIZERS</a>
+                    <a href="#">SUSHI DINNER</a>
+                    <a href="#">LUNCH SPECIAL</a>
+                    <a href="#">ENTREES</a>
+                    <a href="#">SIDEORDER</a>
+                    <a href="#">BEVERAGES</a>
                 </div>
-                <ol type ="1">
-                    <h3><li>USABILITY </li></h3>
-                    <ul>
-                        <li>The user must navigate back and forth between category pages and menu 
-                            item pages when deciding what they want
-                        </li>
-                        <li>The cart was hard to find at first because it is in 
-                            a more non-conventional area of the screen</li>
-                        <li>It is unclear what the slanted bars on the side of 
-                            each row mean, and they do not indicate that the 
-                            rows/options are clickable.</li>
-                        <li>The font is all black and white, thus everything 
-                            feels of equal importance
-                        </li>
-                    </ul>
 
-                    <h3><li> EFFICIENCY </li></h3>
-                    <ul>
-                        <li>
-                            The task of ordering frequently would not be done 
-                            very easily, as you would still have to scroll 
-                            through each item in the menu/category, and remember 
-                            the name of the dish you ordered. Pictures would 
-                            be helpful, or perhaps a “recently ordered”.
-                        </li><li>
-                            When updating your cart, the user must remember to 
-                            press “update quantity” everytime they want to change 
-                            the number of that menu item to order.
-                        </li><li>
-                            There are two “checkout” buttons which may lead to 
-                            confusion. 
-                        </li>
-                    </ul>
+            </div>
+            <div class="categorycontainer">
+                <div class="categoryheader">
+                    <h2>MENU</h2>
+                    <img class="menulogo" src="sakura logo.png"/>
 
-                    <h3><li> LEARNABILITY  </li></h3>
-                    <ul>
-                       <li>I think the site is pretty easy to learn, as you can see 
-                        the different categories on the menu home page. However the
-                        user must first get accustomed to navigating between the different
-                        category and menu item pages.
-                    </li><li>
-                        However, there may be some hesitation before realizing 
-                        the functionality of the buttons at the bottom, since 
-                        they are not there initially when you first start your 
-                        order / your cart is empty.
-
-                    </li><li>
-                        The hierarchy of the categories can be confusing, since 
-                        I’m not sure where to click first in order to get the 
-                        best / most recommended food items.
-                    </li>
-                        
-                    </ul>
-
-                    <h3><li>MEMORABILITY</li></h3>
-                        <ul>
-                            <li> While there are no particulary special maneuvers to order 
-                                from the menu, it can get confusing / overwhelming 
-                                with all the different pages, and you might not 
-                                remember what you ordered when ordering the next time.
-                            </li>
-                        </ul>
-
-                    <h3><li>CONCEPTUAL MODEL </li></h3>
-                        <ul>
-                            <li> I believe the conceptual model of this webpage 
-                                is to be able to view each menu item, order,
-                                 and write notes to customize that order. 
-                                 The user can also view the different prices for
-                                  different sizes of food and pick different 
-                                  options if applicable. 
-                            </li>    
-                        </ul>
-                </ol>
-            
+                </div>
+                <input type="text" id="searchbar" placeholder="Search Menu">
+                <div class="category">
+                    <input type="checkbox" id="category1" name="appetizers" class="menu">
+                   
+                        <label for="category1" class="maincategory">
+                            <img class="dropdownarrow" src="dropdownicon.png"/>
+                            <h3>APPETIZERS</h3> 
+                        </label>
+                        <div class="subcategory">
+                            <h4>Takoyaki</h3>
+                        </div>
+                        <div class="subcategory">
+                            <h4>Oyster Tempura</h3>
+                        </div>
+                        <div class="subcategory">
+                            <h4>Harumaki</h3>
+                        </div>
+                </div>
+                <div class="category">
+                    <input type="checkbox" id="category2" name="sushi dinner" class="menu">
+                        <label for="category2" class="maincategory">
+                            <img class="dropdownarrow" src="dropdownicon.png"/>
+                            <h3>SUSHI DINNER</h3>
+                        </label>
+                        <div class="subcategory">
+                            <h4>Sushi Entrees</h3>
+                        </div>
+                        <div class="subcategory">
+                            <h4>Nigiri + Sashimi</h3>
+                        </div>
+                        <div class="subcategory">
+                            <h4>Maki Roll</h3>
+                        </div>
+                        <div class="subcategory">
+                            <h4>Chef's Special Rolls</h3>
+                        </div>
+                </div>
+                <div class="category">
+                    <input type="checkbox" id="category3" name="lunchspecial" class="menu">
+                        <label for="category3" class="maincategory">
+                            <img class="dropdownarrow" src="dropdownicon.png"/>
+                            <h3>LUNCH SPECIAL</h3>
+                        </label>
+                </div>
+                <div class="category">
+                    <input type="checkbox" id="category4" name="entrees" class="menu">
+                        <label for="category4" class="maincategory">
+                            <img class="dropdownarrow" src="dropdownicon.png"/>
+                            <h3>ENTREES</h3>
+                        </label>
+                </div>
+                <div class="category">
+                    <input type="checkbox" id="category5" name="sideorder" class="menu">
+                        <label for="category5" class="maincategory">
+                            <img class="dropdownarrow" src="dropdownicon.png"/>
+                            <h3>SIDE ORDER</h3>
+                        </label>
+                </div>
+                <div class="category">
+                    <input type="checkbox" id="category6" name="beverages" class="menu">
+                        <label for="category5" class="maincategory">
+                            <img class="dropdownarrow" src="dropdownicon.png"/>
+                            <h3>BEVERAGES</h3>
+                        </label>
+                </div>
                 
             </div>
-            <div class="content">
-                <h2>WebAIM WAVE ACCESSIBILITY</h2>
-                <desc>The problems detected were poor contrast and missing/multiple 
-                form label, which is more for accessibility purposes in the code, 
-                that allow screen users to know what a form is used for. Other than that, 
-                I don’t think that the poor contrast is too 
-                much of an issue, because the difference between different 
-                colors/boxes seemed pretty apparent since almost everything is in greyscale. 
-                However, information in the header (the logo, the home button, and the back button)
-                can be difficult to see at first glance.</desc>
-
-                <br>
-            </div>
-
-            <div class="content">
-                <h2>LOFI SKETCHES</h2>
-                <br><br><h5 style="justify-content: center; align-items: center; text-align: center;">Low-fidelity sketches made in Balsamiq.</h5>
-                <div class="imgwrapper">
-                    <img src="all lofis.png"/>
-                </div>
-            </div>
-
-            <div class="content">
-                <h2>STYLE GUIDE </h2>
-                <div class="imagewrapper">
-                    <img src="style2.png"/>
-                </div>
-            </div>
-
-            <div class="content">
-                <h2>HIFI PROTOTYPES </h2>
-                <br><br><h5 style="justify-content: center; align-items: center; text-align: center;">High-fidelity prototypes made in Figma.</h5>
-                <div class="imagewrapper">
-                    <img src="all hifis.png"/>
-                </div>
-                    
-            </div>
-       
         </div>
-       
-           
-       
-    </body>
+
+
+
+
+        <div class="pathfinderbar">
+            <h5>MENU / SUSHI DINNER / <b>NIGIRI + SASHIMI</b></h5>
+            <img style="height: 90%;" src="vegetarian.png"/>
+
+        </div>
+        <div class="maincontent">
+            <div class="menuitem">
+                <div class="imagewrapper">
+                    <img class="fooditem" src="inari.jpeg"/>
+                </div>
+                <div class="iteminfo">
+                    <div class="itemtext">
+                        <h7>Sweet Tofu Skin</h7>
+                        <img style="width: 100%;" src="line.png">
+                        <desc>Sushi rice stuffed inside seasoned deep-fried tofu</desc>
+                    </div>
+                    <button class="addbutton"><h6>add to cart</h6></button>
+                </div>
+                
+            </div>
+            <div class="menuitem">
+                <div class="imagewrapper">
+                    <img class="fooditem" src="salmon.webp"/>
+                </div>
+                <div class="iteminfo">
+                    <div class="itemtext">
+                        <h7>Salmon</h7>
+                        <img style="width: 100%;" src="line.png">
+                        <desc>Sushi rice stuffed inside seasoned deep-fried tofu</desc>
+                    </div>
+                    <button class="addbutton"><h6>add to cart</h6></button>
+                </div>
+                
+            </div>
+            <div class="menuitem">
+                <div class="imagewrapper">
+                    <img class="fooditem" src="Masago-2.jpeg"/>
+                </div>
+                <div class="iteminfo">
+                    <div class="itemtext">
+                        <h7>Smelt Roe</h7>
+                        <img style="width: 100%;" src="line.png">
+                        <desc>Sushi rice stuffed inside seasoned deep-fried tofu</desc>
+                    </div>
+                    <button class="addbutton"><h6>add to cart</h6></button>
+                </div>
+                
+            </div>
+            <div class="menuitem">
+                <div class="imagewrapper">
+                    <img class="fooditem" src="tamago.jpeg"/>
+                </div>
+                <div class="iteminfo">
+                    <div class="itemtext">
+                        <h7>Tamago</h7>
+                        <img style="width: 100%;" src="line.png">
+                        <desc>Fluffy rolled egg</desc>
+                    </div>
+                    <button class="addbutton"><h6>add to cart</h6></button>
+                </div>
+                
+            </div>
+            <div class="menuitem">
+                <div class="imagewrapper">
+                    <img class="fooditem" src="avacado.jpeg"/>
+                </div>
+                <div class="iteminfo">
+                    <div class="itemtext">
+                        <h7>Avacado</h7>
+                        <img style="width: 100%;" src="line.png">
+                        <desc>Sushi rice stuffed inside seasoned deep-fried tofu</desc>
+                    </div>
+                    <button class="addbutton"><h6>add to cart</h6></button>
+                </div>
+                
+            </div>
+            <div class="menuitem">
+                <div class="imagewrapper">
+                    <img class="fooditem" src="uni.jpeg"/>
+                </div>
+                <div class="iteminfo">
+                    <div class="itemtext">
+                        <h7>Uni</h7>
+                        <img style="width: 100%;" src="line.png">
+                        <desc>Sushi rice stuffed inside seasoned deep-fried tofu</desc>
+                    </div>
+                    <button class="addbutton"><h6>add to cart</h6></button>
+                </div>
+            </div>
+            <div class="menuitem">
+                <div class="imagewrapper">
+                    <img class="fooditem" src="saba.jpeg"/>
+                </div>
+                <div class="iteminfo">
+                    <div class="itemtext">
+                        <h7>Mackerel</h7>
+                        <img style="width: 100%;" src="line.png">
+                        <desc>Sushi rice stuffed inside seasoned deep-fried tofu</desc>
+                    </div>
+                    <button class="addbutton"><h6>add to cart</h6></button>
+                </div>
+            </div>
+            <div class="menuitem">
+                <div class="imagewrapper">
+                    <img class="fooditem" src="inari.jpeg"/>
+                </div>
+                <div class="iteminfo">
+                    <div class="itemtext">
+                        <h7>Unagi</h7>
+                        <img style="width: 100%;" src="unagi.jpeg">
+                        <desc>Sushi rice stuffed inside seasoned deep-fried tofu</desc>
+                    </div>
+                    <button class="addbutton"><h6>add to cart</h6></button>
+                </div>
+            </div>
+            <div class="menuitem">
+                <div class="imagewrapper">
+                    <img class="fooditem" src="inari.jpeg"/>
+                </div>
+                <div class="iteminfo">
+                    <div class="itemtext">
+                        <h7>Sweet Tofu Skin</h7>
+                        <img style="width: 100%;" src="line.png">
+                        <desc>Sushi rice stuffed inside seasoned deep-fried tofu</desc>
+                    </div>
+                    <button class="addbutton"><h6>add to cart</h6></button>
+                </div>
+            </div>
+            <div class="menuitem">
+                <div class="imagewrapper">
+                    <img class="fooditem" src="inari.jpeg"/>
+                </div>
+                <div class="iteminfo">
+                    <div class="itemtext">
+                        <h7>Sweet Tofu Skin</h7>
+                        <img style="width: 100%;" src="line.png">
+                        <desc>Sushi rice stuffed inside seasoned deep-fried tofu</desc>
+                    </div>
+                    <button class="addbutton"><h6>add to cart</h6></button>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div id="footernav">
+                <img style="height:50%; margin-right: 30px;" src="sakura logo.png"/>
+                <h5 style="text-align: left; font-size: 10px;">
+                    <a href="#">HOME</a><br>
+                    <a href="#">ABOUT</a><br>
+                    <a href="#">MENU</a><br>
+                    <a href="#">ORDER ONLINE</a><br>
+                    <a href="#">CONTACT</a><br>
+                </h5>
+            </div>
+            <div id="title" style="flex-direction: column;">
+                <h1 style="font-size: 15px;">SAKURA JAPANESE RESTAURANT</h1>
+                <h5>231 Wickenden St,<br>Providence, RI 02903</h5>
+            </div>
+            <div id="footernav">
+                <img style="height:30%;" src="socialmedia.png"/>
+            </div>
+        </div>
+
+    </div>
+
+    
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="app.js"></script>
+    <noscript>You need to enable JavaScript to view the full site.</noscript>
+</body>
 </html>
